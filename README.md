@@ -16,21 +16,19 @@ Each row of the demographics files represents a single person, but also includes
 
 ## Steps
 
-### Step 0: Load the datasets
-
-In this step, the data files are loaded and simple EDA is performed.
-
-### Step 1: Preprocessing
-- Assessed missing data
-- Convert missing values codes to NAN
-- Assess missing data in each column
 ### Assess Missing Data in Each Column
 
+![image](https://github.com/user-attachments/assets/db9f67ec-0458-4b27-bf4c-1876450288bc)
+
 > As observed in the upper figure, a pattern was noticed regarding some columns would have the equal percentages of missing values.
+
 
 ### Assess Missing Data in Each Row
 
 > Almost **half of the data points have 60% missing values** in a row, with a **maximum of 49 missing values out of 79 columns**.  
+
+![image](https://github.com/user-attachments/assets/bdd0f5eb-af44-433d-8548-44fabc55682c)
+
 
 > On average, **18% of the values are missing per row**.  
 
@@ -71,6 +69,9 @@ In this step, the data files are loaded and simple EDA is performed.
 
 ### Perform Dimensionality Reduction
 
+![image](https://github.com/user-attachments/assets/67291198-e369-474c-acbe-3f852aae6e23)
+
+
 > The number of componnets where chosen based on the variave with the threshold of .95 and the # of compments is 50.
 > Also the graph was observed using the elbow method. It shows that the variance changes slowly between 20 - 30
 
@@ -80,6 +81,8 @@ In this step, the data files are loaded and simple EDA is performed.
 - **Principal Component 2 (PC2)**:
   - `MOBI_REGIO`, `LP_STATUS_FEIN`, `KBA05_ANTG1`, and `FINANZ_MINIMALIST` have strong positive weights. related to mobility, financial status, and minimalistic tendencies. Positive values suggest high scores on variables such as mobility and financial minimalism
   - `SEMIO_KULT`, `FINANZ_ANLEGER`, and `PLZ8_ANTG3` have negative weights, these features contrasts with the positive features in PC2. negative values suggest lower scores on socio-cultural and financial investor characteristics.
+
+
 
 - **Principal Component 3 (PC3)**:
   - there is Strong positive weights for `ANREDE_KZ`, `SEMIO_KAEM`, and `SHOPPER_TYP`. They are demographic data and consumer preferences. Positive values reflect stronger associations with consumer types and personal demographics.
@@ -95,8 +98,11 @@ The k means were applied in the number of clusters between 20 and 21 and the fol
 > more clusters are used, the score improves.
 
 >  a clear elbow is immediately obvious. The decrease seems relatively consistent throughout the range.  the elbow is not very sharp, but it's likely around K=3 or K=4.
+![image](https://github.com/user-attachments/assets/c65d7e8b-2694-45d4-8102-a36db4cdea99)
 
 > Chosen number was 4 based on the graph elbow method
+
+![Image](https://github.com/user-attachments/assets/54d0699a-3524-4766-8f36-a5122f20782a)
 
 ### Compare Customer Data to Demographics Data
 
